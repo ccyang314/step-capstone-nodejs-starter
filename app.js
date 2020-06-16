@@ -15,13 +15,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.use(express.urlencoded());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static('public'));
 
 // View configs.
 var index = require('./routes/index');
 
 // Route path configs.
-app.get('/', index.view);
+app.get('/', index.view, function (req, res) {
+  res.send(req.params)
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
