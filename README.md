@@ -17,3 +17,13 @@ To verify the LTS version is successfully installed:
 ```
 node -v
 ```
+
+## Install and Launch
+To install and launch this skeleton server on your local instance, first run  
+```npm install``` 
+
+then run 
+
+```npm start``` 
+
+After few seconds, your local instance of this skeleton server should be available at `http://localhost:3000`.
