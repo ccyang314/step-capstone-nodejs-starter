@@ -18,6 +18,4 @@
 
 <h3>Displays text based on list in routes/index.js</h3>
 
-{{#each podMembers}}
-<li>{{this}}</li>
-{{/each}}
+{{> textList listElements=podMembers}}
