@@ -21,6 +21,10 @@ app.use('/static', express.static('public'));
 var index = require('./routes/index');
 var client_demo = require('./routes/client_demo');
 
+app.get('/', index.view, function (req, res) {
+  res.send(req.params)
+});
+
 // Route path configs.
 app.get('/fname/:firstName/lname/:lastName', index.view, function (req, res) {
   res.send(req.params)
