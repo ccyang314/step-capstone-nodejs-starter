@@ -1,0 +1,14 @@
+<h1>STEP Example App: Maps</h1>
+
+<h3>Integrates the Maps API with handlebars and node</h3>
+
+<div id="map" style="width: 100vw; min-height: 800px;"></div>
+
+<script>
+  function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8
+    });
+  }
+</script>

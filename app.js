@@ -34,6 +34,8 @@ app.get('/client_demo', client_demo.view, function (req, res) {
   res.send(req.params)
 });
 
+app.get('/maps', (req, res) => res.render('maps'));
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
